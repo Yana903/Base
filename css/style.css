@@ -1,0 +1,308 @@
+@import 'base/index.css';
+
+@font-face {
+    font-family: "OpenSansRegular";
+    src: url("../fonts/OpenSansRegular/OpenSansRegular.eot");
+    src: url("../fonts/OpenSansRegular/OpenSansRegular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/OpenSansRegular/OpenSansRegular.woff") format("woff"),
+    url("../fonts/OpenSansRegular/OpenSansRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "OpenSansBold";
+    src: url("../fonts/OpenSansBold/OpenSansBold.eot");
+    src: url("../fonts/OpenSansBold/OpenSansBold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/OpenSansBold/OpenSansBold.woff") format("woff"),
+    url("../fonts/OpenSansBold/OpenSansBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "SourceSansProLight";
+    src: url("../fonts/SourceSansProLight/SourceSansProLight.eot");
+    src: url("../fonts/SourceSansProLight/SourceSansProLight.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/SourceSansProLight/SourceSansProLight.woff") format("woff"),
+    url("../fonts/SourceSansProLight/SourceSansProLight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    color: #222222;
+}
+
+h1 {
+    font-family: "OpenSansBold";
+    font-size: 34px;
+}
+
+h2 {
+    font-family: "OpenSansBold";
+    font-size: 27px;
+}
+
+h3 {
+    font-family: "OpenSansBold";
+    font-size: 22px;
+}
+
+h4 {
+    font-family: "OpenSansBold";
+    font-size: 17px;
+}
+
+h5 {
+    font-family: "OpenSansBold";
+    font-size: 16px;
+}
+
+h6 {
+    font-family: "OpenSansBold";
+    font-size: 14px;
+}
+
+p {
+    font-family: Arial;
+    font-size: 14px;
+    color: #747474;
+}
+
+blockquote {
+    font-family: Arial;
+    font-size: 14px;
+    font-style: italic;
+    color: #747474;
+}
+
+hr {
+    height: 1px;
+    border: none;
+    background-color: #444444;
+}
+
+mark {
+    background: #ffec82;
+    padding: 0 3px;
+    border: 1px dashed #333;
+}
+
+kbd {
+    font-weight: bold;
+}
+
+ul {
+    font-family: Arial;
+    font-size: 14px;
+    color: #747474;
+}
+
+ul li {
+    list-style-type: none;
+    position: relative;
+    padding-bottom: 20px;
+}
+ul li:before {
+    color: #007975;
+    content: ".";
+    font-size: 38px;
+    position: absolute;
+    top: -24px;
+    left: -15px;
+}
+
+ol {
+    font-family: Arial;
+    font-size: 14px;
+    color: #747474;
+}
+
+ol li {
+    list-style-type: decimal;
+    padding-bottom: 20px;
+}
+
+a {
+    font-family: Arial;
+    font-size: 14px;
+    color: #007975;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #024f60;
+}
+
+abbr {
+    color: #024f60;
+    border-bottom: 1px dashed #024f60;
+}
+
+dl {
+    font-family: Arial;
+    color: #007975;
+}
+
+dd {
+    font-style: italic;
+}
+
+dt {
+    margin-top: 10px;
+}
+
+button, .but-button{
+    width: 138px;
+    height: 38px;
+    background-color: #0f7e96;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+}
+
+button:hover, button:active {
+    background-color: #024f60;
+}
+
+fieldset {
+    font-family: Arial;
+    font-size: 16px;
+    color: #4e4e4e;
+}
+
+fieldset input, .browser {
+    box-sizing: border-box;
+    width: 600px;
+    height: 40px;
+    border-color: #bfbfbf;
+}
+
+
+fieldset button {
+    width: 40px;
+    height: 40px;
+}
+
+label {
+    display: block;
+    font-family: Arial;
+    font-size: 16px;
+    color: #222222;
+}
+
+input::placeholder, .date-input{
+    font-size: 14px;
+    font-style: italic;
+    color: #7b7b7b;
+}
+
+input:focus::placeholder {
+    color: #000;
+    font-style: normal;
+}
+
+input:disabled {
+    background-color: #dfdfdf;
+    color: #000;
+    font-style: normal;
+
+}
+
+.is-error{
+    border-color: red;
+}
+
+.is-valid {
+    border-color: #409b98;
+}
+
+
+
+.checkbox, .radio {
+    display: none;
+}
+.checkbox-custom, .radio-custom {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background-color: #e5e5e5;
+    border: 2px solid #c3c3c3;
+    border-radius: 3px;
+}
+.checkbox-custom, .radio-custom,
+.label-custom {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    color: #222222;
+}
+
+.checkbox:checked + .checkbox-custom::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+    background-image: url("../images/check.png");
+    border-radius: 2px;
+}
+.p-label {
+    font-size: 16px;
+    color: #222222;
+}
+
+.radio:checked + .radio-custom::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    left: 2px;
+    background: #7d7d7d;
+    border-radius: 2px;
+}
+
+.radio-custom,
+.radio:checked + .radio-custom::before {
+    border-radius: 50%;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #dfdfdf;
+    width: 704px;
+    font-family: Arial;
+    font-size: 16px;
+}
+
+table caption{
+    font-weight: bold;
+}
+
+table tr:nth-child(even), th{
+    background: #f6f6f6;
+}
+
+tfoot th{
+    background-color: #fff;
+}
+
+th, td {
+    border: 1px solid #dfdfdf;
+    padding: 15px 0 15px 15px;
+    text-align: left;
+}
+
+.h-name {
+    font-family: "SourceSansProLight";
+    font-size: 32px;
+}
+
